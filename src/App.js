@@ -1,4 +1,6 @@
 import React from 'react';
+import Kid from './kid'
+
 
 class App extends React.Component{
   constructor(props){
@@ -27,9 +29,19 @@ class App extends React.Component{
       <button onClick={ ()=>this.addMoney(1)}>Add Money</button>
       <button onClick={ ()=>this.add20(20)}>Deposite 20</button>
       <button onClick={ ()=>this.take20(20)}>Withdraw 20</button>
+      <Kid spend={this.withdraw} balance={this.state.balance} name="z-man" />
+      
+      
       </>
+    //spend is sent down to the child and zach uses this.props.spend
     ) 
   }
 }
+
+
+
+
+
+
 
 export default App;
