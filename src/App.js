@@ -34,7 +34,7 @@ class App extends React.Component{
       <People />
       
       </>
-    //spend is sent down to the child and zach uses this.props.spend
+    //spend iss sent down to the child and zach uses this.props.spend
     ) 
   }
 }
