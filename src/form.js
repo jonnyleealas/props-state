@@ -21,7 +21,7 @@ class Form extends React.Component{
       return(
         <>
         <form onSubmit={this.handleSubmit}>
-          <input placeHolder="amount" name="amount" onChange={this.handleChange} />
+          <input placeholder="amount" name="amount" onChange={this.handleChange} />
           <button>zach ${this.props.balance}</button>
         </form>
         

@@ -1,5 +1,6 @@
 import React from 'react';
-import Kid from './kid'
+import Kid from './kid.js'
+import People from './people.js'
 
 
 class App extends React.Component{
@@ -30,7 +31,7 @@ class App extends React.Component{
       <button onClick={ ()=>this.add20(20)}>Deposite 20</button>
       <button onClick={ ()=>this.take20(20)}>Withdraw 20</button>
       <Kid spend={this.withdraw} balance={this.state.balance} name="z-man" />
-      
+      <People />
       
       </>
     //spend is sent down to the child and zach uses this.props.spend

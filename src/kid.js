@@ -6,7 +6,7 @@ class Kid extends React.Component{
         <>
         <h2>{this.props.name}Component</h2>
         <Form spend={this.props.spend} balance={this.props.balance} />
-        
+        <hr />
         </>
       )
     }
