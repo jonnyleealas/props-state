@@ -5,21 +5,21 @@ class People extends React.Component {
     constructor(props){
         super(props)
         this.state ={
+            fetching: false,
             people: [],
             pets: ['john', 'dumbar', 'jonny', 'zack', 'allie']
         }
     }
     async componentDidMount(){
-        // https://swapi.dev/api/people/
-        // let pets= ['Rocky', 'Malcom']
-        // this.setState({pets})
+        this.setState({fetching: true})
         const response = await superagent.get('https://swapi.dev/api/people/')
         const people = response.body.results || [];
-        this.setState({people})
+        this.setState({people, fetching: false})
     }
     render(){
         return(
             <>
+            {this.state.fetching?<div>Wait for loading you piece of shit...</div>: ''}
             <ul>
                 <h3>Using .map(value, index) to render Lists</h3>
             {
